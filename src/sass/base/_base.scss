@@ -1,0 +1,27 @@
+/*
+ * Base styles & resets
+ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: $default-font;
+  margin: 0;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  margin: auto;
+  min-height: 15em;
+}
