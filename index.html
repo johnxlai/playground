@@ -15,23 +15,27 @@
   <p>test baby test</p>
 
   <button id="btn1">Btn 1</button>
-  <p class="goner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quaerat alias assumenda delectus non qui perspiciatis et, cupiditate atque nemo, quas id maiores perferendis corrupti eum, tempore aut quo, saepe.</p>
+  <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quaerat alias assumenda delectus non qui perspiciatis et, cupiditate atque nemo, quas id maiores perferendis corrupti eum, tempore aut quo, saepe.</p>
 
-  <button id="btn2">Button 2</button>
+  <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quaerat alias assumenda delectus non qui perspiciatis et, cupiditate atque nemo, quas id maiores perferendis corrupti eum, tempore aut quo, saepe.</p>
 
-  <h1 id="coords"></h1>
+  <div id="myDiv"></div>
+
+  <!-- <button id="btn2">Button 2</button>
+
+  <h1 id="coords"></h1> -->
 
   <!-- <img src="/dist/img/bluebox.png" alt="" class="bluebox">
   <img id="slider" src="/dist/img/coby1.png" alt=""> -->
 
-
-	<!-- <ul id="shMenu">
+  <input type="text" id="newItem">
+	<ul id="shMenu">
 		<li>dog</li>
 		<li>car</li>
 		<li>foot</li>
 		<li>baby</li>
 		<li>coby</li>
-	</ul> -->
+	</ul>
 
 
 
@@ -63,6 +67,8 @@
   <input type="submit" value="Submit">
 </form>
 
+  <ul id="user"></ul>
+
 
 
   <script src="dist/js/main.js"></script>
@@ -72,33 +78,26 @@
 <script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.3.js"></script>
 
 <script>
-  // $('#btn1').click(function(e){
-  //   console.log(e.currentTarget.id);
-  // });
+  $('p.para1').css({color:'red', background:'black'});
 
-  $(document).on('mousemove', function(e){
-    $('#coords').html('Coords:Y: ' +e.clientY + " X " + e.clientX);
-  });
-
-  $('select').change(function(){
-    alert('changed');
+  $('#newItem').keyup(function(e){
+    var code = e.which;
+    if (code == 13){
+      e.preventDefault();
+      $('ul').append('<li>'+ e.target.value +'</li>')
+    }
 
   });
+  var myArr = ['Jon', 'Dave', 'Dales', 'Dirstein'];
 
-  $('#form').submit(function(e){
-    e.preventDefault();
-    console.log('submmited');
-
-    var name = $('input#name').data();
-    console.log(name);
+  $.each(myArr, function(i, value){
+      console.log(value);
+      $('#user').append('<li>' + value + '</li>');
 
   });
 
-  // $('#btn2').data()
 
-  // $('#btn2').on('click', function(){
-  //   $('.goner').show();
-  // });
+
 </script>
 
 

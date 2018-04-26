@@ -19,5 +19,32 @@ $('#slider').click(function() {
 
 	$('#slider').attr('src', '/dist/img/' + image);
 });
+// $('#btn1').click(function(e){
+//   console.log(e.currentTarget.id);
+// });
+
+// $(document).on('mousemove', function(e){
+//   $('#coords').html('Coords:Y: ' +e.clientY + " X " + e.clientX);
+// });
+
+// $('select').change(function(){
+//   alert('changed');
+
+// });
+
+// $('#form').submit(function(e){
+//   e.preventDefault();
+//   console.log('submmited');
+
+//   var name = $('input#name').data();
+//   console.log(name);
+
+// });
+
+// $('#btn2').data()
+
+// $('#btn2').on('click', function(){
+//   $('.goner').show();
+// });
 
 //jquery ui menu
