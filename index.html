@@ -79,11 +79,29 @@
   <div class="box"><h1>Hello World</h1></div>
 
 
+  <button id="btnSlideUp">Slide Up</button>
+  <button id="btnSlideDown">Slide Down</button>
+  <button id="btnSlideToggle">Slide Toggle</button>
+  <div class="box"><h1>Hello World</h1></div>
+
+
+  <button id="moveRight">Move Right</button>
+  <button id="moveLeft">Move Left</button>
+  <button id="moveAround">Move Around</button>
+  <div class="box2"></div>
+
 <style>
   .box {
     background:black;
     color:white;
     padding:20px;
+  }
+  .box2 {
+    background-color: red;
+    width:100px;
+    height:100px;
+    position:relative;
+
   }
 </style>
 
@@ -120,16 +138,71 @@ $(document).ready(function(){
       console.log('testing');
 
 
-  $("#btnFadeOut").click(function(){
-    $('.box').fadeOut();
+  // $("#btnFadeOut").click(function(){
+  //   $('.box').fadeOut(3000, function(){
+  //     $("#btnFadeOut").text('GG');
+  //   });
+  // });
+
+  // $("#btnFadeIn").click(function(){
+  //   $('.box').fadeIn();
+  // });
+
+  // $("#btnfadeToggle").click(function(){
+  //   $('.box').fadeToggle();
+  // });
+
+  $("#btnSlideUp").click(function(){
+    $('.box').slideUp(3000);
   });
 
-  $("#btnFadeIn").click(function(){
-    $('.box').fadeIn();
+  $("#btnSlideDown").click(function(){
+    $('.box').slideDown(3000);
   });
 
-  $("#btnfadeToggle").click(function(){
-    $('.box').fadeToggle();
+  $("#btnSlideToggle").click(function(){
+    $('.box').slideToggle();
+  });
+
+
+  $('#moveRight').click(function(){
+      $('.box2').animate({
+        left:500,
+        opacity:'0.5',
+        width:'200px',
+        height:'200px'
+      });
+  });
+
+  $('#moveLeft').click(function(){
+    $('.box2').animate({
+        left:0,
+        opacity:'1',
+        width:'100px',
+        height:'100px'
+    });
+  });
+
+  $('#moveAround').click(function(){
+    //create a var for box 2 so we can call it multiple times
+    var box = $('.box2');
+    box.animate({
+      left:300
+    });
+
+    box.animate({
+      top:300
+    });
+
+    box.animate({
+      left:0,
+      top:300
+    });
+
+    box.animate({
+      left:0,
+      top:0
+    });
   });
 
 });
