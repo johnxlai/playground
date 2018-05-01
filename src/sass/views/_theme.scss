@@ -2,9 +2,19 @@
  * Theme
  */
 .test {
-	background: green;
+	background: $brand-color;
+}
+
+//example of a mixin
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
 }
 
 .test2 {
 	margin: 20px;
+
+	@include border-radius(5px);
 }
