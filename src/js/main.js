@@ -48,3 +48,25 @@ $('#slider').click(function() {
 // });
 
 //jquery ui menu
+
+//Creating tab
+
+//grab the correct tab
+
+$('.tab-panels .tabs li').on('click', function() {
+	$('.tab-panels .tabs li.active').removeClass('active');
+	$(this).addClass('active');
+
+	var panelSelected = $(this).attr('rel');
+
+	//hide that tab
+	$('.tab-panels .panel.active').slideUp(300, showNextPanel);
+
+	function showNextPanel() {
+		$(this).removeClass('active');
+
+		$('#' + panelSelected).slideDown(300, function() {
+			$(this).addClass('active');
+		});
+	}
+});

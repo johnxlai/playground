@@ -10,15 +10,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <h1>😀 Go time.</h1>
-  <p class="test test2">geagaga</p>
+  <h1><!-- 😀 Go time. --></h1>
+  <!-- <p class="test test2">geagaga</p>
   <p>test baby test</p>
 
   <button id="btn1">Btn 1</button>
   <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quaerat alias assumenda delectus non qui perspiciatis et, cupiditate atque nemo, quas id maiores perferendis corrupti eum, tempore aut quo, saepe.</p>
 
   <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quaerat alias assumenda delectus non qui perspiciatis et, cupiditate atque nemo, quas id maiores perferendis corrupti eum, tempore aut quo, saepe.</p>
-
+ -->
   <div id="myDiv"></div>
 
   <!-- <button id="btn2">Button 2</button>
@@ -28,7 +28,7 @@
   <!-- <img src="/dist/img/bluebox.png" alt="" class="bluebox">
   <img id="slider" src="/dist/img/coby1.png" alt=""> -->
 
-  <input type="text" id="newItem">
+  <!-- <input type="text" id="newItem">
 	<ul id="shMenu">
 		<li>dog</li>
 		<li>car</li>
@@ -69,26 +69,45 @@
   <option value="audi">Audi</option>
   </select>
   <input type="submit" value="Submit">
-</form>
+</form> -->
 
-  <ul id="user"></ul>
+  <div class="tab-panels">
+      <ul class="tabs">
+          <li rel="panel1" class="active">panel1</li>
+          <li rel="panel2">panel2</li>
+          <li rel="panel3">panel3</li>
+          <li rel="panel4">panel4</li>
+      </ul>
 
-  <button id="btnFadeOut">Fade Out</button>
-  <button id="btnfadeIn">Fade In</button>
-  <button id="btnfadeToggle">Fade Toggle</button>
-  <div class="box"><h1>Hello World</h1></div>
-
-
-  <button id="btnSlideUp">Slide Up</button>
-  <button id="btnSlideDown">Slide Down</button>
-  <button id="btnSlideToggle">Slide Toggle</button>
-  <div class="box"><h1>Hello World</h1></div>
-
-
-  <button id="moveRight">Move Right</button>
-  <button id="moveLeft">Move Left</button>
-  <button id="moveAround">Move Around</button>
-  <div class="box2"></div>
+      <div id="panel1" class="panel active">
+          content1<br/>
+          content1<br/>
+          content1<br/>
+          content1<br/>
+          content1<br/>
+      </div>
+      <div id="panel2" class="panel">
+          content2<br/>
+          content2<br/>
+          content2<br/>
+          content2<br/>
+          content2<br/>
+      </div>
+      <div id="panel3" class="panel">
+          content3<br/>
+          content3<br/>
+          content3<br/>
+          content3<br/>
+          content3<br/>
+      </div>
+      <div id="panel4" class="panel">
+          content4<br/>
+          content4<br/>
+          content4<br/>
+          content4<br/>
+          content4<br/>
+      </div>
+  </div>
 
 <style>
   .box {
@@ -103,6 +122,45 @@
     position:relative;
 
   }
+
+  .tab-panels ul {
+      margin: 0;
+      padding: 0;
+  }
+  .tab-panels ul li {
+      list-style-type: none;
+      display: inline-block;
+      background: #999;
+      margin: 0;
+      padding: 3px 10px;
+      border-radius: 10px 10px 0 0;
+      color: #fff;
+      font-weight: 200;
+      cursor: pointer;
+
+  }
+  .tab-panels ul li:hover {
+      color: #fff;
+      background: #666;
+  }
+
+  .tab-panels ul li.active {
+      color: #fff;
+      background: #666;
+  }
+
+  .tab-panels .panel {
+      display:none;
+      background: #c9c9c9;
+      padding: 30px;
+      border-radius: 0 0 10px 10px;
+  }
+
+  .tab-panels .panel.active {
+      display:block;
+  }
+
+
 </style>
 
 
@@ -115,97 +173,13 @@
 <script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.3.js"></script>
 
 <script>
-  // $('p.para1').css({color:'red', background:'black'});
 
-  // $('#newItem').keyup(function(e){
-  //   var code = e.which;
-  //   if (code == 13){
-  //     e.preventDefault();
-  //     $('ul').append('<li>'+ e.target.value +'</li>')
-  //   }
-
-  // });
-  // var myArr = ['Jon', 'Dave', 'Dales', 'Dirstein'];
-
-  // $.each(myArr, function(i, value){
-  //     console.log(value);
-  //     $('#user').append('<li>' + value + '</li>');
-
-  // });
+// $(document).ready(function(){
 
 
-$(document).ready(function(){
-      console.log('testing');
 
 
-  // $("#btnFadeOut").click(function(){
-  //   $('.box').fadeOut(3000, function(){
-  //     $("#btnFadeOut").text('GG');
-  //   });
-  // });
-
-  // $("#btnFadeIn").click(function(){
-  //   $('.box').fadeIn();
-  // });
-
-  // $("#btnfadeToggle").click(function(){
-  //   $('.box').fadeToggle();
-  // });
-
-  $("#btnSlideUp").click(function(){
-    $('.box').slideUp(3000);
-  });
-
-  $("#btnSlideDown").click(function(){
-    $('.box').slideDown(3000);
-  });
-
-  $("#btnSlideToggle").click(function(){
-    $('.box').slideToggle();
-  });
-
-
-  $('#moveRight').click(function(){
-      $('.box2').animate({
-        left:500,
-        opacity:'0.5',
-        width:'200px',
-        height:'200px'
-      });
-  });
-
-  $('#moveLeft').click(function(){
-    $('.box2').animate({
-        left:0,
-        opacity:'1',
-        width:'100px',
-        height:'100px'
-    });
-  });
-
-  $('#moveAround').click(function(){
-    //create a var for box 2 so we can call it multiple times
-    var box = $('.box2');
-    box.animate({
-      left:300
-    });
-
-    box.animate({
-      top:300
-    });
-
-    box.animate({
-      left:0,
-      top:300
-    });
-
-    box.animate({
-      left:0,
-      top:0
-    });
-  });
-
-});
+// });
 
 
 
