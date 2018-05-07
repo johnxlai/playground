@@ -27,7 +27,8 @@
 
   <article>
     <h2>Heading Two</h2>
-    <h4>Heading Four</h4>    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex numquam odit facere tempora placeat eos, veniam asperiores quae minima pariatur atque velit, voluptatibus! Impedit magnam, reprehenderit veniam vel, tempora iusto!</p>
+    <h4>Heading Four</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex numquam odit facere tempora placeat eos, veniam asperiores quae minima pariatur atque velit, voluptatibus! Impedit magnam, reprehenderit veniam vel, tempora iusto!</p>
   </article>
 
 
@@ -35,10 +36,6 @@
 <div class="rocket" data-color="red"></div> -->
 
 <style>
-.green {
-  color: green;
-}
-
 </style>
 
 
@@ -54,19 +51,32 @@
 
 $(document).ready(function(){
 
+
+
+  //on click each link do actions below all items have class of btn
+
   $('.btn').on('click', function(e){
-    e.preventDefault();
+      e.preventDefault();
 
-      $('h2').html($(this).attr("data-h"));
-      $('h4').html($(this).attr("data-starting"));
-      $('p').html($(this).attr("data-p"));
+    //grab data-h and inject to h2
+    $('h2').html($(this).attr('data-h'));
 
-      var newImage = $(this).attr("href");
-      console.log(newImage);
 
-      $('#changeMe').attr("src", newImage);
+  //grab data-starting and inject to h4 (you can write it either way)
+    var h4 = $(this).attr('data-starting');
+    $('h4').html(h4);
 
+
+  //grab data-p and inject to p
+  $('p').html($(this).attr('data-p'));
+
+  //grab href and change src in changeMe Img tag
+
+  var link = $(this).attr('href');
+  $('#changeMe').attr('src', link);
   });
+
+
 
 });
 

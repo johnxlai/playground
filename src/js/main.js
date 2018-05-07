@@ -1,24 +1,24 @@
 console.log('JS load');
 
-$('.bluebox').click(function() {
-	$(this).hide(2000);
-});
+// $('.bluebox').click(function() {
+// 	$(this).hide(2000);
+// });
 
 //slide show
-var slideShow = ['coby1.png', 'coby2.png', 'coby3.png', 'coby4.png'];
+// var slideShow = ['coby1.png', 'coby2.png', 'coby3.png', 'coby4.png'];
 
-var focusImg = 1;
+// var focusImg = 1;
 
-$('#slider').click(function() {
-	var image = slideShow[focusImg];
-	focusImg++;
+// $('#slider').click(function() {
+// 	var image = slideShow[focusImg];
+// 	focusImg++;
 
-	if (focusImg > 3) {
-		focusImg = 0;
-	}
+// 	if (focusImg > 3) {
+// 		focusImg = 0;
+// 	}
 
-	$('#slider').attr('src', '/dist/img/' + image);
-});
+// 	$('#slider').attr('src', '/dist/img/' + image);
+// });
 // $('#btn1').click(function(e){
 //   console.log(e.currentTarget.id);
 // });
@@ -53,20 +53,34 @@ $('#slider').click(function() {
 
 //grab the correct tab
 
-$('.tab-panels .tabs li').on('click', function() {
-	$('.tab-panels .tabs li.active').removeClass('active');
-	$(this).addClass('active');
+// $('.tab-panels .tabs li').on('click', function() {
+// 	$('.tab-panels .tabs li.active').removeClass('active');
+// 	$(this).addClass('active');
 
-	var panelSelected = $(this).attr('rel');
+// 	var panelSelected = $(this).attr('rel');
 
-	//hide that tab
-	$('.tab-panels .panel.active').slideUp(300, showNextPanel);
+// 	//hide that tab
+// 	$('.tab-panels .panel.active').slideUp(300, showNextPanel);
 
-	function showNextPanel() {
-		$(this).removeClass('active');
+// 	function showNextPanel() {
+// 		$(this).removeClass('active');
 
-		$('#' + panelSelected).slideDown(300, function() {
-			$(this).addClass('active');
-		});
-	}
-});
+// 		$('#' + panelSelected).slideDown(300, function() {
+// 			$(this).addClass('active');
+// 		});
+// 	}
+// });
+
+// $('.btn').on('click', function(e){
+//     e.preventDefault();
+
+//       $('h2').html($(this).attr("data-h"));
+//       $('h4').html($(this).attr("data-starting"));
+//       $('p').html($(this).attr("data-p"));
+
+//       var newImage = $(this).attr("href");
+//       console.log(newImage);
+
+//       $('#changeMe').attr("src", newImage);
+
+//   });
