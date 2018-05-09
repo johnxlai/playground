@@ -48,37 +48,98 @@
 <script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.3.js"></script>
 
 <script>
+  // const warrior = {
+  //   equipment:["sword","shield"],
+  //   energy: 100,
+  //   location: {
+  //     x:1,
+  //     y:2
+  //   },
+  //   walk: function() {
+  //     console.log (this.energy);
+  //     // if (location[0] === 10 && location[1] === 5){
+  //     //   this.location[0] +=2
+  //     // }
+  //   },
+  //   strike: function(){
+  //     console.log (this.equipment);
+  //     // if (energy == 100){
+  //     //   energy - 25
+  //     // }
+  //   },
+  //   pickUpEquipment: function() {
+  //       addItem.push('');
+  //   }
 
-$(document).ready(function(){
+  // }
+
+  // console.log(warrior.walk());
+
+  const student = {
+    equipment:[
+      "pen",
+      "textbook"
+    ],
+    energy: 100,
+    grades: 100,
+
+    uniform: {
+      top:"white",
+      bottom:"green",
+      shoes:"sandals"
+    },
+
+    food: function(calories){
+      this.energy = this.energy + calories;
+    },
+    newEquipment: function(newItem){
+      this.equipment.push(newItem);
+    }
+    // timeStudied: function(minutes){
+    //   this.energy = this.energy - 10;
+    //   this.grades = this.grades + 10;
+    // }
+
+
+  }
+console.log(student);
 
 
 
-  //on click each link do actions below all items have class of btn
-
-  $('.btn').on('click', function(e){
-      e.preventDefault();
-
-    //grab data-h and inject to h2
-    $('h2').html($(this).attr('data-h'));
-
-
-  //grab data-starting and inject to h4 (you can write it either way)
-    var h4 = $(this).attr('data-starting');
-    $('h4').html(h4);
-
-
-  //grab data-p and inject to p
-  $('p').html($(this).attr('data-p'));
-
-  //grab href and change src in changeMe Img tag
-
-  var link = $(this).attr('href');
-  $('#changeMe').attr('src', link);
-  });
 
 
 
-});
+
+// $(document).ready(function(){
+
+
+
+//   //on click each link do actions below all items have class of btn
+
+//   $('.btn').on('click', function(e){
+//       e.preventDefault();
+
+//     //grab data-h and inject to h2
+//     $('h2').html($(this).attr('data-h'));
+
+
+//   //grab data-starting and inject to h4 (you can write it either way)
+//     var h4 = $(this).attr('data-starting');
+//     $('h4').html(h4);
+
+
+//   //grab data-p and inject to p
+//   $('p').html($(this).attr('data-p'));
+
+//   //grab href and change src in changeMe Img tag
+
+//   var link = $(this).attr('href');
+//   $('#changeMe').attr('src', link);
+//   });
+
+
+
+// });
 
 
 </script>
