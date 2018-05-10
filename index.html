@@ -48,61 +48,53 @@
 <script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.3.js"></script>
 
 <script>
-  // const warrior = {
-  //   equipment:["sword","shield"],
-  //   energy: 100,
-  //   location: {
-  //     x:1,
-  //     y:2
-  //   },
-  //   walk: function() {
-  //     console.log (this.energy);
-  //     // if (location[0] === 10 && location[1] === 5){
-  //     //   this.location[0] +=2
-  //     // }
-  //   },
-  //   strike: function(){
-  //     console.log (this.equipment);
-  //     // if (energy == 100){
-  //     //   energy - 25
-  //     // }
-  //   },
-  //   pickUpEquipment: function() {
-  //       addItem.push('');
-  //   }
 
-  // }
+	// const warrior = {
+	// 	equipment: ["sword", "shield"],
+	// 	energy: 100,
+	// 	location: {
+	// 		x:10,
+	// 		y:10
+	// 	},
+	// 	walk: function() {
+	// 		if (x == 10){
+	// 			location.x = location.x + 2;
+	// 			location.y = location.y +5;
+	// 		}
+	// 	},
+	// 	strike: function() {
+	// 		energy = energy - 125;
+	// 	},
+	// 	pickUpEquipment: function(newItem) {
+	// 		equipment.push(newItem);
+	// 	}
+	// }
 
-  // console.log(warrior.walk());
-
-  const student = {
-    equipment:[
-      "pen",
-      "textbook"
-    ],
-    energy: 100,
-    grades: 100,
-
-    uniform: {
-      top:"white",
-      bottom:"green",
-      shoes:"sandals"
-    },
-
-    food: function(calories){
-      this.energy = this.energy + calories;
-    },
-    newEquipment: function(newItem){
-      this.equipment.push(newItem);
-    }
-    // timeStudied: function(minutes){
-    //   this.energy = this.energy - 10;
-    //   this.grades = this.grades + 10;
-    // }
+const student = {
+		equipment: [ "book", "pen"],
+		energy: 3,
+		grades:5,
+		uniform: {
+			top: "tshirt",
+			bottom: "pants",
+			shoes: "flips"
+		},
+		food: function(calories) {
+			this.energy = this.energy + calories;
+		},
+		newEquip: function(newItem){
+			this.equipment.push(newItem);
+		},
+		uniform: function(newcloth, thingToUpdate){
+			this.uniform[thingToUpdate] = newcloth;
+		},
+		timeStudies: function(studyTime) {
+			grades = grades + studyTime
+			energy = energy - studyTime
+		}
+}
 
 
-  }
-console.log(student);
 
 
 
