@@ -98,7 +98,31 @@ const student = {
 
 
 
+const flipMany = () => {
+        let heads = "";
+        let tails = "";
 
+        for (let i = 0; i < 100; i++){
+          //passing the flip function here
+          const flip = () => {
+              return Math.floor(Math.random() * Math.floor(2));
+          }
+
+          const results = flip();
+          // console.log(results);
+
+          if (results == 1){
+            // console.log('heads');
+            const finalHeads = heads + 1;
+            console.log(finalHeads);
+          }else {
+            const finalTails = tails + 1;
+            // console.log(finalTails);
+          }
+        };
+      }
+
+      flipMany();
 
 
 
