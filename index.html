@@ -41,93 +41,26 @@
 
 
 
-  <script src="dist/js/main.js"></script>
-
-  <script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
+<script src="dist/js/main.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
 <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.3.js"></script>
 
 <script>
 
-	// const warrior = {
-	// 	equipment: ["sword", "shield"],
-	// 	energy: 100,
-	// 	location: {
-	// 		x:10,
-	// 		y:10
-	// 	},
-	// 	walk: function() {
-	// 		if (x == 10){
-	// 			location.x = location.x + 2;
-	// 			location.y = location.y +5;
-	// 		}
-	// 	},
-	// 	strike: function() {
-	// 		energy = energy - 125;
-	// 	},
-	// 	pickUpEquipment: function(newItem) {
-	// 		equipment.push(newItem);
-	// 	}
-	// }
 
-const student = {
-		equipment: [ "book", "pen"],
-		energy: 3,
-		grades:5,
-		uniform: {
-			top: "tshirt",
-			bottom: "pants",
-			shoes: "flips"
-		},
-		food: function(calories) {
-			this.energy = this.energy + calories;
-		},
-		newEquip: function(newItem){
-			this.equipment.push(newItem);
-		},
-		uniform: function(newcloth, thingToUpdate){
-			this.uniform[thingToUpdate] = newcloth;
-		},
-		timeStudies: function(studyTime) {
-			grades = grades + studyTime
-			energy = energy - studyTime
-		}
-}
+$(document).ready(function(){
+
+  $('.btn').on('click', function(e){
+    e.preventDefault();
+
+    $('h2').html($(this).data('h'));
+
+  });
 
 
 
-
-
-const flipMany = () => {
-        let heads = "";
-        let tails = "";
-
-        for (let i = 0; i < 100; i++){
-          //passing the flip function here
-          const flip = () => {
-              return Math.floor(Math.random() * Math.floor(2));
-          }
-
-          const results = flip();
-          // console.log(results);
-
-          if (results == 1){
-            // console.log('heads');
-            const finalHeads = heads + 1;
-            console.log(finalHeads);
-          }else {
-            const finalTails = tails + 1;
-            // console.log(finalTails);
-          }
-        };
-      }
-
-      flipMany();
-
-
-
-// $(document).ready(function(){
-
+});
 
 
 //   //on click each link do actions below all items have class of btn
