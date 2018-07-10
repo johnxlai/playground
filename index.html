@@ -73,10 +73,45 @@ $(document).ready(function(){
 });
 
 
+var animals = [
+  {name:'GG', species: 'rabbit'},
+  {name:'coby', species: 'dog'},
+  {name:'yolo', species: 'dog'},
+  {name:'yoda', species: 'dog'},
+  {name:'mandy', species: 'rats'},
+  {name:'whatever', species: 'cats'}
+]
+
+// var dogs = []
+// for (var i = 0; i < animals.length; i++) {
+
+//   console.log(animals[i].species)
+//   if (animals[i].species === 'dog')
+//     dogs.push(animals[i])
+// }
+
+// console.log(dogs);
 
 
+// var dogs = animals.filter(function(animal){
+//   return animal.species === 'dog';
+// })
+
+// console.log(dogs);
 
 
+// var names = []
+// for (var i = 0; i < animals.length ; i++){
+//    names.push(animals[i].name)
+// }
+// console.log(names);
+
+
+var names = animals.map(function(animal){
+  return animal.name
+})
+
+console.log(names);
 
 
 
