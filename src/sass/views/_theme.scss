@@ -5,6 +5,12 @@
 	background: $brand-color;
 }
 
+.clearfix::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
 //example of a mixin
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
@@ -47,4 +53,43 @@ nav ul {
 
 .active {
 	background-color: #4caf50;
+}
+
+.seven {
+	width: calc(70% - 20px);
+	background-color: green;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+}
+
+.three {
+	width: calc(30% - 20px);
+	background-color: black;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	color: white;
+}
+
+section {
+	background-color: grey;
+}
+
+.push--ends {
+	margin-top: 11px;
+	margin-bottom: 11px;
+}
+
+#myBar {
+	width: 10%;
+	height: 30px;
+	background-color: #4caf50;
+	text-align: center;
+
+	/* To center it horizontally (if you want) */
+	line-height: 30px;
+
+	/* To center it vertically */
+	color: white;
 }

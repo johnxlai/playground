@@ -20,68 +20,49 @@
     </ul>
   </nav>
 
+  <section class="clearfix">
+    <div class="seven">
+      <h2>Heading Two</h2>
+      <h4>Heading Four</h4>
+    </div>
+    <div class="three">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex numquam odit facere tempora placeat eos, veniam asperiores quae minima pariatur atque velit, voluptatibus! Impedit magnam, reprehenderit veniam vel, tempora iusto!</p>
+    </div>
+  </section>
+
+    <a href="/dist/img/compass.jpg" class="btn" data-h="Compass" data-starting="$25,250" data-p="Finance for $72 weekly, Lease for $81 weekly">Compass</a>
+    <a href="/dist/img/cherokee.jpg" class="btn" data-h="Cherokee" data-starting="$24,961" data-p="Finance for $77 weekly, Lease for $87 weekly">Cherokee</a>
+    <a href="/dist/img/wrangler.jpg" class="btn" data-h="Wrangler" data-starting="$39,895" data-p="Finance for $121 weekly, Lease for $137 weekly">Wrangler</a>
+
+  <section>
+    <div id="myProgress" class="push--ends">
+      <div id="myBar"></div>
+    </div>
+    <br>
+    <button onclick="move()">Click Me</button>
+  </section>
+
+
+
 
 
   <div class="img-container">
     <img id="changeMe" src="/dist/img/wrangler.jpg" alt="">
   </div>
 
-    <a href="/dist/img/compass.jpg" class="btn" data-h="Compass" data-starting="$25,250" data-p="Finance for $72 weekly, Lease for $81 weekly">Compass</a>
-    <a href="/dist/img/cherokee.jpg" class="btn" data-h="Cherokee" data-starting="$24,961" data-p="Finance for $77 weekly, Lease for $87 weekly">Cherokee</a>
-    <a href="/dist/img/wrangler.jpg" class="btn" data-h="Wrangler" data-starting="$39,895" data-p="Finance for $121 weekly, Lease for $137 weekly">Wrangler</a>
 
-  <article>
-    <h2>Heading Two</h2>
-    <h4>Heading Four</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex numquam odit facere tempora placeat eos, veniam asperiores quae minima pariatur atque velit, voluptatibus! Impedit magnam, reprehenderit veniam vel, tempora iusto!</p>
-  </article>
+
+
 
   <a data-fancybox="gallery" href="/dist/img/coby4.png"><img src="/dist/img/compass.jpg"></a>
   <a data-fancybox="gallery" href="/dist/img/coby2.png"><img src="/dist/img/cherokee.jpg"></a>
   <a data-fancybox="gallery" href="/dist/img/coby1.png"><img src="/dist/img/wrangler.jpg"></a>
 
-<div class="rocket" data-color="green"></div>
-<div class="rocket" data-color="red"></div>
 
 <style>
 
 
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="dist/js/main.js"></script>
 <script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
@@ -96,25 +77,38 @@
 <script>
 $(document).ready(function(){
 
+  function move() {
+      var elem = document.getElementById("myBar");
+      var width = 10;
+      var id = setInterval(frame, 10);
+      function frame() {
+          if (width >= 100) {
+              clearInterval(id);
+          } else {
+              width++;
+              elem.style.width = width + '%';
+              elem.innerHTML = width * 1 + '%';
+          }
+      }
+  }
 
-  const $btn = $('.btn')
-  $btn.on('click', function(e){
-    e.preventDefault();
 
-    const newTitle = $(this).attr("data-h");
-    const newSecondaryTitle = $(this).attr("data-starting");
-    const p = $(this).attr("data-p");
 
-    $('h2').html(newTitle);
-    $('h4').html(newSecondaryTitle);
-    $('p').html(p);
-  });
 
-  $('li a').on('click', function(e){
-    e.preventDefault();
-    $('li a').removeClass('active');
-    $(this).addClass('active');
-  })
+  // const $btn = $('.btn')
+
+  //   $btn.on('click', function(e){
+  //     e.preventDefault();
+
+  //     const newTitle = $(this).attr("data-h");
+  //     const newSub = $(this).attr("data-starting");
+  //     const newContent =$(this).attr("data-p");
+
+  //     $('h2').html(newTitle);
+  //     $('h4').html(newSub);
+  //     $('p').html(newContent);
+  // });
+
 });
 
 
