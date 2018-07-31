@@ -11,19 +11,24 @@
 </head>
 <body>
 
+  <nav>
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">News</a></li>
+      <li><a href="contact.asp">Contact</a></li>
+      <li><a href="about.asp">About</a></li>
+    </ul>
+  </nav>
+
+
+
   <div class="img-container">
     <img id="changeMe" src="/dist/img/wrangler.jpg" alt="">
-    <!-- <div class="bg-color">hello</div> -->
   </div>
 
-  <nav>
     <a href="/dist/img/compass.jpg" class="btn" data-h="Compass" data-starting="$25,250" data-p="Finance for $72 weekly, Lease for $81 weekly">Compass</a>
     <a href="/dist/img/cherokee.jpg" class="btn" data-h="Cherokee" data-starting="$24,961" data-p="Finance for $77 weekly, Lease for $87 weekly">Cherokee</a>
     <a href="/dist/img/wrangler.jpg" class="btn" data-h="Wrangler" data-starting="$39,895" data-p="Finance for $121 weekly, Lease for $137 weekly">Wrangler</a>
-<!--     <a href="" class="btn" data-h="<h2>Wrangler JR</h2>" data-starting="<h4>$24,961</h4>" data-p="Finance for $77 weekly, Lease for $87 weekly">Wrangler JR</a>
-    <a href="" class="btn">Wrangler</a>
-    <a href="" class="btn">Renegade</a> -->
-  </nav>
 
   <article>
     <h2>Heading Two</h2>
@@ -35,11 +40,45 @@
   <a data-fancybox="gallery" href="/dist/img/coby2.png"><img src="/dist/img/cherokee.jpg"></a>
   <a data-fancybox="gallery" href="/dist/img/coby1.png"><img src="/dist/img/wrangler.jpg"></a>
 
-<!-- <div class="rocket" data-color="green"></div>
-<div class="rocket" data-color="red"></div> -->
+<div class="rocket" data-color="green"></div>
+<div class="rocket" data-color="red"></div>
 
 <style>
+
+
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70,6 +109,12 @@ $(document).ready(function(){
     $('h4').html(newSecondaryTitle);
     $('p').html(p);
   });
+
+  $('li a').on('click', function(e){
+    e.preventDefault();
+    $('li a').removeClass('active');
+    $(this).addClass('active');
+  })
 });
 
 
