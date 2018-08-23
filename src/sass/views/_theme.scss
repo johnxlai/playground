@@ -1,7 +1,36 @@
 /**
  * Theme
  */
-.test {
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	color: white;
+}
+
+li {
+	float: left;
+	padding: 20px;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border: 1px dotted white;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+.brand {
 	background: $brand-color;
 }
 
@@ -92,4 +121,13 @@ section {
 
 	/* To center it vertically */
 	color: white;
+}
+
+//// Background Color
+.light-grey {
+	background-color: grey;
+}
+
+.dark-golden-rod {
+	background-color: darkgoldenrod;
 }

@@ -3,7 +3,7 @@
 <head>
   <script>document.documentElement.className=document.documentElement.className.replace("no-js","yes-js");window.G={D:{_qj:[]}};G.Q=function(k){G.D._qj.push(k)};</script>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Coffee Thing</title>
   <link rel="stylesheet" href="dist/css/style.css">
 <!--   <link rel="stylesheet" href="jquery-ui.css">
  -->
@@ -11,52 +11,46 @@
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="default.asp">Home</a></li>
-      <li><a href="news.asp">News</a></li>
-      <li><a href="contact.asp">Contact</a></li>
-      <li><a href="about.asp">About</a></li>
-    </ul>
-  </nav>
+  <!-- user chooses a way to make coffee.
+  press buttons, display info
+  then later might add in more stuff
+  like countdown clock
+  like timer -->
 
-  <section class="clearfix">
-    <div class="seven">
-      <h2>Heading Two</h2>
-      <h4>Heading Four</h4>
-    </div>
-    <div class="three">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex numquam odit facere tempora placeat eos, veniam asperiores quae minima pariatur atque velit, voluptatibus! Impedit magnam, reprehenderit veniam vel, tempora iusto!</p>
-    </div>
-  </section>
-
-    <a href="/dist/img/compass.jpg" class="btn" data-h="Compass" data-starting="$25,250" data-p="Finance for $72 weekly, Lease for $81 weekly">Compass</a>
-    <a href="/dist/img/cherokee.jpg" class="btn" data-h="Cherokee" data-starting="$24,961" data-p="Finance for $77 weekly, Lease for $87 weekly">Cherokee</a>
-    <a href="/dist/img/wrangler.jpg" class="btn" data-h="Wrangler" data-starting="$39,895" data-p="Finance for $121 weekly, Lease for $137 weekly">Wrangler</a>
+  <!-- User type in what they want to make might become buttons later  -->
+  <ul>
+    <li><a href="">French Press</a></li>
+    <li><a href="">Aeropress</a></li>
+    <li><a href="">Pour over/ Drip</a></li>
+    <li><a href="">Cold press</a></li>
+    <li><a href="">Moka</a></li>
+    <li><a href="">Siphon</a></li>
+  </ul>
 
   <section>
-    <div id="myProgress" class="push--ends">
-      <div id="myBar"></div>
+    <div class="content">
+      <img src="" alt="">
+      <h2>Coffee Brewing - Methods</h2>
+      <h3>Change Method Here</h3>
+
+      <p>Brewing time</p>
+      <p>Grind</p>
+      <p>Coffee Roast</p>
+      <p>Tools</p>
+
     </div>
-    <br>
-    <button onclick="move()">Click Me</button>
   </section>
 
+  <aside class="dark-golden-rod">
+    <div class="timer">Timer</div>
+    <button>Start</button>
+  </aside>
+
+  <footer class="a11y">
+    <h4>Reference  - https://www.homegrounds.co/the-complete-guide-to-coffee-brewing-methods/#tab-con-12</h4>
+  </footer>
 
 
-
-
-  <div class="img-container">
-    <img id="changeMe" src="/dist/img/wrangler.jpg" alt="">
-  </div>
-
-
-
-
-
-  <a data-fancybox="gallery" href="/dist/img/coby4.png"><img src="/dist/img/compass.jpg"></a>
-  <a data-fancybox="gallery" href="/dist/img/coby2.png"><img src="/dist/img/cherokee.jpg"></a>
-  <a data-fancybox="gallery" href="/dist/img/coby1.png"><img src="/dist/img/wrangler.jpg"></a>
 
 
 <style>
@@ -77,23 +71,7 @@
 <script>
 $(document).ready(function(){
 
-  function move() {
-      var elem = document.getElementById("myBar");
-      var width = 10;
-      var id = setInterval(frame, 10);
-      function frame() {
-          if (width >= 100) {
-              clearInterval(id);
-          } else {
-              width++;
-              elem.style.width = width + '%';
-              elem.innerHTML = width * 1 + '%';
-          }
-      }
-  }
-
-
-
+  // $('body').css('background','yellow');
 
   // const $btn = $('.btn')
 
@@ -112,92 +90,9 @@ $(document).ready(function(){
 });
 
 
-var animals = [
-  {name:'GG', species: 'rabbit'},
-  {name:'coby', species: 'dog'},
-  {name:'yolo', species: 'dog'},
-  {name:'yoda', species: 'dog'},
-  {name:'mandy', species: 'rats'},
-  {name:'whatever', species: 'cats'}
-]
-
-// var dogs = []
-// for (var i = 0; i < animals.length; i++) {
-
-//   console.log(animals[i].species)
-//   if (animals[i].species === 'dog')
-//     dogs.push(animals[i])
-// }
-
-// console.log(dogs);
-
-
-// var dogs = animals.filter(function(animal){
-//   return animal.species === 'dog';
-// })
-
-// console.log(dogs);
-
-
-// var names = []
-// for (var i = 0; i < animals.length ; i++){
-//    names.push(animals[i].name)
-// }
-// console.log(names);
-
-
-var names = animals.map(function(animal){
-  return animal.name
-})
-
-console.log(names);
-
-var orders = [
-  { amount: 250 },
-  { amount:400 },
-  { amount: 100 }
-]
-
-
-
-
-
-
-
-//   //on click each link do actions below all items have class of btn
-
-//   $('.btn').on('click', function(e){
-//       e.preventDefault();
-
-//     //grab data-h and inject to h2
-//     $('h2').html($(this).attr('data-h'));
-
-
-//   //grab data-starting and inject to h4 (you can write it either way)
-//     var h4 = $(this).attr('data-starting');
-//     $('h4').html(h4);
-
-
-//   //grab data-p and inject to p
-//   $('p').html($(this).attr('data-p'));
-
-//   //grab href and change src in changeMe Img tag
-
-//   var link = $(this).attr('href');
-//   $('#changeMe').attr('src', link);
-//   });
-
-
-
-// });
 
 
 </script>
 
-
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
-<!--   <script src="dist/js/jquery-ui.js"></script>
-
- --></body>
+</body>
 </html>
