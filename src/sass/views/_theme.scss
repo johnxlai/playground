@@ -131,3 +131,37 @@ section {
 .dark-golden-rod {
 	background-color: darkgoldenrod;
 }
+
+.btn {
+	background: grey;
+	display: inline-block;
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding: 10px;
+	border: 2px solid transparent;
+}
+
+.low {
+	background-color: green;
+}
+
+.mod {
+	background-color: yellow;
+}
+
+.high {
+	background-color: orange;
+}
+
+.ext {
+	background-color: red;
+}
+
+.border-black {
+	border: 2px solid black;
+}
+
+.soft {
+	padding: 11px;
+}
