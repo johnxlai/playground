@@ -27,9 +27,11 @@
       <option value="high">high</option>
       <option value="ext">extreme</option>
     </select>
-
-    <input type="text" id="text">
   </div>
+
+  <form action="" id="fireMe">
+    <input type="text" id="userInput" placeholder="wee">
+  </form>
 
   <div class="fire clearfix">
     <div class="btn low">low</div>
@@ -75,6 +77,8 @@
 
 
 
+
+
 <style>
 
 
@@ -94,9 +98,36 @@
 <script>
 $(document).ready(function(){
 
+
+
+
+  $('#fireMe').submit(function(e){
+    e.preventDefault();
+
+    var userValue = $("#userInput").val();
+    console.log(userValue);
+
+    $('.btn').removeClass('border-black');
+
+
+    if (userValue == "low"){
+        $('.low').addClass('border-black');
+    } else if (userValue == 'mod') {
+        $('.mod').addClass('border-black');
+
+    } else if (userValue == 'high'){
+      $('.high').addClass('border-black');
+
+    } else {
+      $('.ext').addClass('border-black');
+    }
+
+  });
+
   $('#fireRating').change(function(){
     //if user grabs low add class to low button
     let fireRating = $( "select#fireRating option:checked" ).val()
+
     console.log(fireRating);
 
     $('.btn').removeClass('border-black');
@@ -113,7 +144,6 @@ $(document).ready(function(){
     } else {
       $('.ext').addClass('border-black');
     }
-
 
 
     // this.addClass('border-black');
