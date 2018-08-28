@@ -101,70 +101,80 @@ $(document).ready(function(){
 
 
 
-  $('#fireMe').submit(function(e){
-    e.preventDefault();
+  // $('#fireMe').submit(function(e){
+  //   e.preventDefault();
 
-    var userValue = $("#userInput").val();
-    console.log(userValue);
+  //   var userValue = $("#userInput").val();
+  //   console.log(userValue);
 
-    $('.btn').removeClass('border-black');
-
-
-    if (userValue == "low"){
-        $('.low').addClass('border-black');
-    } else if (userValue == 'mod') {
-        $('.mod').addClass('border-black');
-
-    } else if (userValue == 'high'){
-      $('.high').addClass('border-black');
-
-    } else {
-      $('.ext').addClass('border-black');
-    }
-
-  });
-
-  $('#fireRating').change(function(){
-    //if user grabs low add class to low button
-    let fireRating = $( "select#fireRating option:checked" ).val()
-
-    console.log(fireRating);
-
-    $('.btn').removeClass('border-black');
-
-    if (fireRating == 'low') {
-       $('.low').addClass('border-black');
-
-    } else if (fireRating == 'mod'){
-      $('.mod').addClass('border-black');
-
-    } else if (fireRating == 'high'){
-      $('.high').addClass('border-black');
-
-    } else {
-      $('.ext').addClass('border-black');
-    }
+  //   $('.btn').removeClass('border-black');
 
 
-    // this.addClass('border-black');
-  });
+  //   if (userValue == "low"){
+  //       $('.low').addClass('border-black');
+  //   } else if (userValue == 'mod') {
+  //       $('.mod').addClass('border-black');
 
+  //   } else if (userValue == 'high'){
+  //     $('.high').addClass('border-black');
 
-  // $('body').css('background','yellow');
+  //   } else {
+  //     $('.ext').addClass('border-black');
+  //   }
 
-  // const $btn = $('.btn')
-
-  //   $btn.on('click', function(e){
-  //     e.preventDefault();
-
-  //     const newTitle = $(this).attr("data-h");
-  //     const newSub = $(this).attr("data-starting");
-  //     const newContent =$(this).attr("data-p");
-
-  //     $('h2').html(newTitle);
-  //     $('h4').html(newSub);
-  //     $('p').html(newContent);
   // });
+
+  // $('#fireRating').change(function(){
+  //   //if user grabs low add class to low button
+  //   let fireRating = $( "select#fireRating option:checked" ).val()
+
+  //   console.log(fireRating);
+
+  //   $('.btn').removeClass('border-black');
+
+  //   if (fireRating == 'low') {
+  //      $('.low').addClass('border-black');
+
+  //   } else if (fireRating == 'mod'){
+  //     $('.mod').addClass('border-black');
+
+  //   } else if (fireRating == 'high'){
+  //     $('.high').addClass('border-black');
+
+  //   } else {
+  //     $('.ext').addClass('border-black');
+  //   }
+
+  // });
+
+  var animals = [
+    { name:'Meh', species:'bear' },
+    { name:'Perry', species:'bear' },
+    { name:'Peter', species:'bear' },
+    { name:'Moka', species:'cat' },
+    { name:'Wela', species:'bear' }
+  ]
+
+
+  //for loop version
+  // var bears = [];
+
+  // for(var i = 0; i < animals.length ; i++){
+  //   console.log(animals[i]);
+  //   if (animals[i].species === 'bear') {
+  //     console.log('bear');
+  //     bears.push(animals[i]);
+  //   }
+
+  //   console.log(bears);
+  // }
+
+
+  var dogs = animals.filter(function(x){
+    return x.species === 'bear';
+  });
+
+  console.log(dogs);
 
 });
 
